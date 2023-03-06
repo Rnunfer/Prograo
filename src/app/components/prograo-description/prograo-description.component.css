@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* COLORES */
+/* TAMAÑOS */
+/* FUENTES */
+.container h1 {
+  font-family: "Merriweather";
+  font-size: 40px;
+  font-weight: lighter;
+  text-align: center;
+}
+.container section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}/*# sourceMappingURL=prograo-description.component.css.map */

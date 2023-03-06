@@ -1,0 +1,19 @@
+@import '../../../sass/mixins';
+@import '../../../sass/variables';
+
+.container {
+
+    h1 {
+        @include h1;
+    }
+
+    section {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        article {
+            
+        }
+    }
+}
