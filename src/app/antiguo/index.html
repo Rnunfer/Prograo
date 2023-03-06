@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prograo</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/1bb080c6ae.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather" />
+</head>
+<body class="bg-dark">
+
+    <header class="d-none d-md-block bg-light">
+        <section class="row justify-content-between align-items-center container-xxl py-1 ps-1 pe-4 pe-xxl-1 m-auto">
+            <a class="d-flex col" href="./index.html">
+                <img src="./Imágenes/Logo_recortado.png" style="width: 100px;">
+            </a>
+
+           <div class="col d-flex d-flex-row justify-content-end p-0">
+                <input class="btn btn-primary" type="button" value="Identificarse" data-bs-toggle="modal" data-bs-target="#modalMenuMovil">
+           </div>
+        </section>
+    </header>
+
+    <!-- HEADER MÓVIL -->
+    <header class="navbar d-md-none bg-light" style="position: sticky; top: 0%; z-index: 10;">
+        <section class="container-xxl py-2 px-3 m-0 d-flex justify-content-between align-items-center">
+            <a href="./index.html">
+                <img src="./Imágenes/Logo_recortado.png" style="width: 100px;">
+            </a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalMenuMovil">
+                <i class="fa-2x fa-solid fa-bars"></i>
+            </a>
+        </section>
+    </header>
+
+    <div class="modal right fade" id="modalMenuMovil">
+        <div class="modal-dialog modal-side modal-top-right">
+            <div class="modal-content">
+                <div class="modal-header border pb-0">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Iniciar sesión</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Registrarse</button>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active p-3" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                        <div class="form-outline mb-3">
+                            <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Email"/>
+                        </div>
+            
+                        <div class="form-outline mb-3">
+                            <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Contraseña"/>
+                        </div>
+    
+                        <div class="form-check d-flex justify-content-start mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                            <label class="form-check-label fs-7 ps-2" for="form1Example3"> Recordar contraseña</label>
+                        </div>
+        
+                        <button class="btn btn-primary btn-lg btn-block col-12 m-0 mb-2" type="submit">Identificarse</button>
+        
+                        <hr class="my-4">
+        
+                        <button class="col-12 btn btn-lg btn-block btn-primary mb-2 border-0" style="background-color: #dd4b39;" type="submit"><i class="fab fa-google me-2"></i> Login con google</button>
+                        <button class="col-12 btn btn-lg btn-block btn-primary mb-2 border-0" style="background-color: #3b5998;" type="submit"><i class="fab fa-facebook-f me-2"></i>Login con facebook</button>
+                    </div>
+                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                        <div class="tab-pane fade show active p-3" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                            <div class="form-outline mb-3">
+                                <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Email"/>
+                            </div>
+                
+                            <div class="form-outline mb-3">
+                                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Contraseña"/>
+                            </div>
+
+                            <div class="form-outline mb-3">
+                                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Repetir contraseña"/>
+                            </div>
+            
+                            <button class="btn btn-primary btn-lg btn-block col-12 m-0" type="submit">Crear Usuario</button>
+            
+                            <hr class="my-4">
+            
+                            <button class="col-12 btn btn-lg btn-block btn-primary mb-2 border-0" style="background-color: #dd4b39;" type="submit"><i class="fab fa-google me-2"></i> Login con google</button>
+                            <button class="col-12 btn btn-lg btn-block btn-primary mb-2 border-0" style="background-color: #3b5998;" type="submit"><i class="fab fa-facebook-f me-2"></i>Login con facebook</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <section id="fondoGradiente" class="d-flex position-relative bg-light overflow-hidden" style="height: 550px;">
+
+        <div class="letrasInicio">
+            <p class="position-absolute h1 ">Java</p>
+            <p class="position-absolute h3">Spring</p>
+            <p class="position-absolute h2">Thymeleaf</p>
+            <p class="position-absolute h1">Git</p>
+            <img class="position-absolute"src="./Imágenes/oveja.png">
+            <p class="position-absolute">CREATE&nbspDATABASE&nbsptienda&nbspCHARACTER&nbspSET&nbsputf8mb4;</p>
+            <p class="position-absolute">link rel="stylesheet" href="./css/styles.css"</p>
+        </div>
+
+        <section class="container-xl row p-5 justify-content-center align-items-center m-auto p-0" style="background: rgba(255, 255, 255, 0.5); z-index: 5; border-radius: 50px;">
+            <div class="col-12 col-md-8 h1 text-align-center p-0 m-0 mb-3 text-center" style="font-size: 2.5em;">ENCUENTRE SU PROGRAMADOR FREELANCER IDEAL</div>
+            <ul class="mb-0 list-inline align-items-center d-flex d-flex-row p-0 col-12 col-md-8 row justify-content-center">
+                <li class="list-inline-item col-12 me-5">
+                    <form class="rounded p-0 form-group bg-light row">
+                        <input class="col w-100 border-0 flex-grow m-0 rounded" type="text" placeholder="Ej: Java, Desarrollo Web, Madrid" style="background-color: none; outline: none;">
+                        <button class="col-2 hover-zoom fa-2x btn btn-light m-0 p-0" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </li>
+                <div class="text-secondary fs-4 text-center m-0 p-0">o</div>
+                <input class="col-6 btn btn-secondary mt-1 text-light" type="button" value="Crear un proyecto">
+            </ul>
+        </section>
+
+    </section>
+
+    <main class="bg-light py-5">
+        <div class="px-3 container-xxl px-xxl-0">
+            <div class="h1 mb-4 text-center">¿Qué es Prograo?</div>
+                <div class="row justify-content-between">
+
+                    <div class="col-12 col-md-3 mb-4 mb-md-0">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="pe-1 h4 d-inline fa-solid fa-bolt text-secondary"></i>
+                            <div class="d-inline h3 text-primary">Eficaz</div>
+                        </div>
+                        <div class="fs-5 text-center">Prograo es una herramienta web para poder contratar programadores freelancers rápidamente</div>
+                    </div>
+
+                    <div class="col-12 col-md-3 mb-4 mb-md-0">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="pe-1 h4 d-inline fa-solid fa-bullseye text-secondary"></i>
+                            <div class="d-inline h3 text-primary">Precisa</div>
+                        </div>
+                        <div class="fs-5 text-center">La página ofrece diversas herramientas para que, sin que importe el nivel que tiene de informática, pueda encontrar a un freelancer ideal para su problema</div>
+                    </div>
+
+                    <div class="col-12 col-md-3 md-4 md-md-0">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="pe-1 h4 d-inline fa-solid fa-lock text-secondary"></i>
+                            <div class="d-inline h3 text-primary">Segura</div>
+                        </div>
+                        <div class="fs-5 text-center">Diversas medidas hacen que las interacciones entre los usuarios y los freelancers sean 100% segura, consiguiendo que los archivos y las transacciones no puedan ser filtradas ni trucadas</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container-xxl m-auto px-3 px-xxl-0">
+                <div class="h1 mt-5 pt-5 pb-3 text-center border-top">Proyectos predefinidos</div>
+                <div class="fs-5">Diseñar todo un proyecto desde 0 o buscar al programador freelancer idóneo uno a uno puede llevar más tiempo del que disponen muchas personas, por ello Prograo ofrece una serie de proyectos casi hechos para así facilitarle la vida</div>
+                <div class="accordion border p-2 rounded mt-2" id="acordeonProyectos">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Diseño Web de una tienda
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="fs-6 mb-1">
+                            Disponer de una tienda sin una página web presenta a día de hoy una gran desventaja respecto a los competidores.
+                            <br>
+                            Pero tener una página web no solo es suficiente, esta tiene que ser agradable a la vista, rápida y entendible para todo el público.
+                            <br>
+                            Aunque a día de hoy existen numerosas herramientas para autocrear las páginas web, solo un auténtico profesional puede asegurarse que la calidad de la página sea lo suficientemente alta como para destacar.
+                          </div>
+                          <div class="border-top mt-1 pt-1">
+                            
+                            <a href="./listado.html">
+                                <input type="button" class="btn btn-primary" value="Encontrar freelancers"></input>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                            Mantenimiento de una base de datos
+                          </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <div class="fs-6 mb-1">
+                              Una base de datos es el corazón de cualquier página web.
+                              <br>
+                              Sin ellas, estas no serían más que unos escaparates coloridos pero que, más allá, incapaces de guardar información durante grandes cantidades de tiempo.
+                              <br>
+                              Asegurarse que se contrata un buen gestor de bases de datos no solo le dará vida a la web, sino que la hará más rápida y eficiente
+                            </div>
+                            <div class="border-top mt-1 pt-1">
+                              
+                                <a href="./listado.html">
+                                    <input type="button" class="btn btn-primary" value="Encontrar freelancers"></input>
+                                </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                            Tester profesional
+                          </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <div class="fs-6 mb-1">
+                              El desarrollo de cualquier programa informático, sea de web o no, es complejo.
+                              <br>
+                              Esto lleva a que la probabilidad de que surjan errores durante la producción de esta sean muy elevados.
+                              <br>
+                              Disponer en el equipo de un profesional experto en encontrar estos errores permitirá que la calidad del producto final sea mucho más elevada.
+                            </div>
+                            <div class="border-top mt-1 pt-1">
+                              
+                                <a href="./listado.html">
+                                    <input type="button" class="btn btn-primary" value="Encontrar freelancers"></input>
+                                </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                            Desarrollador de aplicaciones móviles
+                          </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <div class="fs-6 mb-1">
+                              El uso de los teléfonos móviles inteligentes no ha parado de aumentar desde que se introdujeron en el mercado.
+                              <br>
+                              Gracias a ello, surgió todo una industria alrededor del desarrollo de programas específicos para estos aparatos.
+                              <br>
+                              Cualquier página web, videojuego, herramienta, etc. que disponga de una versión de móvil verá aumentada sus ganancias en cantidades considerables.
+                            </div>
+                            <div class="border-top mt-1 pt-1">
+                            <a href="./listado.html">
+                                <input type="button" class="btn btn-primary" value="Encontrar freelancers"></input>
+                            </a>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                        <ul class="pagination mt-2">
+                          <li class="page-item">
+                            <a class="page-link" href="#acordeonProyectos" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#acordeonProyectos">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#acordeonProyectos">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#acordeonProyectos">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#acordeonProyectos" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                  </div>
+                  
+                </div>
+                
+        </div>
+    </main>
+
+    <footer class="bg-dark py-5">
+
+        <div class="container-xxl px-3 p-xxl-0">
+            <ul class="list-inline border-bottom pb-3">
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light" href="#">Términos y condiciones</a></li>
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light" href="#">Política de privacidad</a></li>
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light" href="#">Política de cookies</a></li>
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light"  href="#">Notificaciones de privacidad</a></li>
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light" href="#">Cookie settings</a></li>
+            </ul>
+            <div class="row align-items-end">
+                <img class="col-1 p-0" src="./Imágenes/Logotipo2.png" style="width: 50px;">
+                <p class="col text-primary text-light mb-0">Copyright © 2019-2022 Grupo Prograo S.L. Todos los derechos reservados</p>
+            </div>
+        </div>
+
+    </footer>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

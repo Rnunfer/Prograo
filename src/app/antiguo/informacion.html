@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prograo</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/1bb080c6ae.js" crossorigin="anonymous"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather" />
+</head>
+<body>
+
+    <header class="d-none d-md-block bg-light">
+        <section class="row justify-content-between align-items-center container-xxl py-1 ps-1 pe-4 pe-xxl-1 m-auto">
+            <a class="d-flex col" href="./index.html">
+                <img src="./Imágenes/Logo_recortado.png" style="width: 100px;">
+            </a>
+
+           <div class="col d-flex d-flex-row justify-content-end p-0">
+                <input class="btn btn-primary" type="button" value="Identificarse" data-bs-toggle="modal" data-bs-target="#modalMenuMovil">
+           </div>
+        </section>
+    </header>
+
+    <nav class="d-none d-md-block bg-secondary p-2" style="position: sticky; top: 0%; z-index: 10;">
+        <section class="container-xxl px-3 p-xxl-0">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="./index.html">Inicio</a></li>
+                  <li class="breadcrumb-item"><a href="./listado.html">Freelancers</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Maximiliano Pérez de los Campos</li>
+                </ol>
+              </nav>
+            <ul class="mb-0 list-inline align-items-center d-flex d-flex-row p-0">
+                <li class="list-inline-item col me-5">
+                    <form class="rounded p-0 form-group bg-light row">
+                        <input class="col w-100 border-0 flex-grow m-0 rounded" type="text" placeholder="Ej: Java, Desarrollo Web, Madrid" style="background-color: none; outline: none;">
+                        <button class="col-2 hover-zoom fa-2x btn btn-light m-0 p-0" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </li>
+                <div class="list-inline-item">
+                    <p class="d-inline text-light m-0 h5 me-4">/</p>
+                    <input class="d-inline btn btn-primary" type="button" value="Crear un proyecto">
+                    <input class="d-inline btn btn-primary" type="button" value="Buscador rápido">
+                </div>
+            </ul>
+        </section>
+    </nav>
+
+    <!-- HEADER MÓVIL -->
+    <header class="navbar d-md-none bg-light" style="position: sticky; top: 0%; z-index: 10;">
+        <section class="container-xxl py-2 px-3 m-0 d-flex justify-content-between align-items-center">
+            <a href="./index.html">
+                <img src="./Imágenes/Logo_recortado.png" style="width: 100px;">
+            </a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalMenuMovil">
+                <i class="fa-2x fa-solid fa-bars"></i>
+            </a>
+        </section>
+    </header>
+
+    <div class="modal right fade" id="modalMenuMovil">
+        <div class="modal-dialog modal-side modal-top-right">
+            <div class="modal-content">
+                <div class="modal-header border pb-0">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Iniciar sesión</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Registrarse</button>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active p-3" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                        <div class="form-outline mb-3">
+                            <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Email"/>
+                        </div>
+            
+                        <div class="form-outline mb-3">
+                            <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Contraseña"/>
+                        </div>
+    
+                        <div class="form-check d-flex justify-content-start mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                            <label class="form-check-label fs-7 ps-2" for="form1Example3"> Recordar contraseña</label>
+                        </div>
+        
+                        <button class="btn btn-primary btn-lg btn-block col-12 m-0 mb-2" type="submit">Identificarse</button>
+        
+                        <hr class="my-4">
+        
+                        <button class="col-12 btn btn-lg btn-block btn-primary mb-2 border-0" style="background-color: #dd4b39;" type="submit"><i class="fab fa-google me-2"></i> Login con google</button>
+                        <button class="col-12 btn btn-lg btn-block btn-primary mb-2 border-0" style="background-color: #3b5998;" type="submit"><i class="fab fa-facebook-f me-2"></i>Login con facebook</button>
+                    </div>
+                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                        <div class="tab-pane fade show active p-3" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                            <div class="form-outline mb-3">
+                                <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Email"/>
+                            </div>
+                
+                            <div class="form-outline mb-3">
+                                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Contraseña"/>
+                            </div>
+
+                            <div class="form-outline mb-3">
+                                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Repetir contraseña"/>
+                            </div>
+            
+                            <button class="btn btn-primary btn-lg btn-block col-12 m-0" type="submit">Crear Usuario</button>
+            
+                            <hr class="my-4">
+            
+                            <button class="col-12 btn btn-lg btn-block btn-primary mb-2 border-0" style="background-color: #dd4b39;" type="submit"><i class="fab fa-google me-2"></i> Login con google</button>
+                            <button class="col-12 btn btn-lg btn-block btn-primary mb-2 border-0" style="background-color: #3b5998;" type="submit"><i class="fab fa-facebook-f me-2"></i>Login con facebook</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <main class="p-xxl-0 px-3 container-xxl">
+        <div class="row py-3 border-bottom">
+            <div class="col-12 col-sm-3">
+                <img class="img-fluid rounded-circle mb-3" src="./Imágenes/Cara 1.jpg">
+            </div>
+            <div class="col-12 col-sm-9 row justify-content-between">
+                <div>
+                    <div class="h1">Maximiliano Pérez de los Campos</div>
+                    <em class="h4">Desarrollador frontend y diseñador gráfico</em>
+                    <div class="d-flex align-items-center mt-2">
+                        <i class="fa-solid fa-star text-primary h5 pt-1"></i>
+                        <i class="fa-solid fa-star text-primary h5 pt-1"></i>
+                        <i class="fa-solid fa-star text-primary h5 pt-1"></i>
+                        <i class="fa-solid fa-star text-primary h5 pt-1"></i>
+                        <i class="fa-solid fa-star text-primary h5 pt-1"></i>
+                        <p class="fs-5 ps-2 m-0">de 34 críticas</p>
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                        <img class="m-0 p-0" src="./Imágenes/espana.png" style="width: 25px;">
+                        <p class="fs-5 m-0 ms-2">Madrid, España</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div>
+                        <div class="fs-5">Tarifa aproximada:</div>
+                        <div class="fs-4 fw-bold">60€/hora</div>
+                    </div>
+                    <input class="btn bg-primary fs-2" type="button" value="Contactar"></input>
+                </div>
+            </div>
+        </div>
+
+        <div class="informacionFreelancer mt-5">
+            <div class="tituloInformacionFreelancer">DESCRIPCIÓN</div>
+            <div class="cuerpoInformacionFreelancer fs-5 border-0 p-0 bg-light">Me dedico a crear páginas web a empresas y particulares, manejándome en distintos lenguajes y frameworks para adaptarme al cliente. Además, soy capaz de manejarme en programas de diseño gráfico.</div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 col-md-8">
+                <div class="informacionFreelancer">
+
+                    <div class="tituloInformacionFreelancer">HABILIDADES</div>
+                        <div class="cuerpoInformacionFreelancer">
+                            <div class="row">
+                                <div class="col-12 col-md-6 border-end">
+                                    <div class="row align-items-center">
+                                        <a class="col-6 fs-6 m-0 fw-bold text-primary text-decoration-none">Javascript</a>
+                                        <div class="col-6 fs-6 m-0">39 proyectos</div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <a class="col-6 fs-6 m-0 fw-bold text-primary text-decoration-none mt-2">Java</a>
+                                        <div class="col-6 fs-6 m-0">13 proyectos</div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <a class="col-6 fs-6 m-0 fw-bold text-primary text-decoration-none mt-2">React.js</a>
+                                        <div class="col-6 fs-6 m-0">31 proyectos</div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <a class="col-6 fs-6 m-0 fw-bold text-primary text-decoration-none mt-2">Ruby</a>
+                                        <div class="col-6 fs-6 m-0">5 proyectos</div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <a class="col-6 fs-6 m-0 fw-bold text-primary text-decoration-none mt-2">Ruby on rails</a>
+                                        <div class="col-6 fs-6 m-0">5 proyectos</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="row align-items-center">
+                                        <a href="#" class="col-6 fs-6 m-0 fw-bold text-primary text-decoration-none">Python</a>
+                                        <div class="col-6 fs-6 m-0">41 proyectos</div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <a class="col-6 fs-6 m-0 fw-bold text-primary text-decoration-none mt-2">Adobe XD</a>
+                                        <div class="col-6 fs-6 m-0">21 proyectos</div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <a class="col-6 fs-6 m-0 fw-bold text-primary text-decoration-none mt-2">Photoshop</a>
+                                        <div class="col-6 fs-6 m-0">15 proyectos</div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <a class="col-6 fs-6 m-0 fw-bold text-primary text-decoration-none mt-2">HTML</a>
+                                        <div class="col-6 fs-6 m-0">39 proyectos</div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <a class="col-6 fs-6 m-0 fw-bold text-primary text-decoration-none mt-2">CSS</a>
+                                        <div class="col-6 fs-6 m-0">39 proyectos</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="informacionFreelancer my-5">
+                        <div class="tituloInformacionFreelancer">CALIFICACIONES</div>
+
+                            <div class="cuerpoInformacionFreelancer">
+                                <div class="row align-items-start">
+                                    <img class="img-fluid" src="./Imágenes/Icono_usuario.png" style="width: 80px;">
+                                    <div class="col ps-0">
+                                        <em class="fw-bold">María Hernández</em>
+                                        <div class="d-flex align-items-center">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <div class="ps-2 fs-6 m-0" style="color: gray;">27/10/2022</div>
+                                        </div>
+                                        <div class="fs-6 m-0 mt-2">Trabajo impecable y fácil comunicación</div>
+                                    </div>
+                                </div>
+
+                                <div class="border my-3"></div>
+
+                                <div class="row align-items-start">
+                                    <img class="img-fluid" src="./Imágenes/Icono_usuario.png" style="width: 80px;">
+                                    <div class="col ps-0">
+                                        <em class="fw-bold">Sonia S.</em>
+                                        <div class="d-flex align-items-center">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <div class="ps-2 fs-6 m-0" style="color: gray;">15/10/2022</div>
+                                        </div>
+                                        <div class="fs-6 m-0 mt-2">No me puedo quejar, la comunicación con el señor fue fluida y sin problemas durante todo el trabajo. Cuando algo no me convencía le mandaba un mensaje y a las pocas horas ya estaba solucionado. Cuando necesite volver a hacer cambios en mi página web le volveré a contactar</div>
+                                    </div>
+                                </div>
+
+                                <div class="border my-3"></div>
+
+                                <div class="row align-items-start">
+                                    <img class="img-fluid" src="./Imágenes/Icono_usuario.png" style="width: 80px;">
+                                    <div class="col ps-0">
+                                        <em class="fw-bold">Raúl Blanco</em>
+                                        <div class="d-flex align-items-center">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <div class="ps-2 fs-6 m-0" style="color: gray;">3/10/2022</div>
+                                        </div>
+                                        <div class="fs-6 m-0 mt-2"></div>
+                                    </div>
+                                </div>
+
+                                <div class="border my-3"></div>
+
+                                <div class="row align-items-start">
+                                    <img class="img-fluid" src="./Imágenes/edificio-de-oficinas.png" style="width: 80px;">
+                                    <div class="col ps-0">
+                                        <em class="fw-bold">Receta Fácil</em>
+                                        <div class="d-flex align-items-center">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                            <div class="ps-2 fs-6 m-0" style="color: gray;">29/9/2022</div>
+                                        </div>
+                                        <div class="fs-6 m-0 mt-2">Renovación de la página web de nuestra empresa. Entrega rápida y muy profesional.</div>
+                                        <div class="fs-7" style="color: gray;">Imágenes:</div>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImagen">
+                                            <img class="col-6 img-fluid mt-3" src="./Imágenes/paginaWeb.png">
+                                        </a>
+
+                                        <div class="modal" id="modalImagen">
+                                            <div class="modal-dialog modal-xl">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title">Imagen en grande</h5>
+                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <img src="./Imágenes/paginaWeb.png" class="img-fluid">
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>                               
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-center">
+                                    <a href="#" class="fs-6 mt-4 text-primary text-decoration-underline">Cargas más calificaciones</a>
+                                </div>
+                                
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+
+                <div class="informacionFreelancer">
+                    <div class="tituloInformacionFreelancer">ESTADÍSTICAS</div>
+                    <div class="cuerpoInformacionFreelancer">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="fw-bold">Número de proyectos totales</div>
+                            <div class="fw-bold">44</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="m-0">Entregados en plazo:</div>
+                            <div class="m-0">42</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="m-0 mt-1">Pendientes:</div>
+                            <div class="m-0 mt-1">1</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="m-0 mt-1">En revisión final:</div>
+                            <div class="m-0 mt-1">1</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="m-0 mt-1">No entregados:</div>
+                            <div class="m-0 mt-1">0</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="m-0 mt-1">Entrega tarde:</div>
+                            <div class="m-0 mt-1">0</div>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <div class="fw-bold mt-2">Número de horas totales</div>
+                            <div class="fw-bold mt-2">2576</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="m-0 mt-1">Media de horas por proyecto:</div>
+                            <div class="m-0 mt-1">113</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="m-0 mt-1">Máximo dedicado a un único proyecto:</div>
+                            <div class="m-0 mt-1">419</div>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <div class="fw-bold mt-2">Fecha de registro</div>
+                            <div class="fw-bold mt-2">12/02/2022</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="informacionFreelancer mt-5">
+                    <div class="tituloInformacionFreelancer">PREFERENCIAS</div>
+                    <div class="cuerpoInformacionFreelancer">
+                        <div class="fw-bold">Idiomas</div>
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center mt-1">
+                                <img src="./Imágenes/espana.png" style="width: 20px;">
+                                <div class="m-0 ps-1">Español</div>
+                            </div>
+                            <div class="m-0 mt-1">Nativo</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center mt-1">
+                                <img src="./Imágenes/reino-unido.png" style="width: 20px;">
+                                <div class="m-0 ps-1">Inglés</div>
+                            </div>
+                            <div class="m-0 mt-1">C1</div>
+                        </div>
+                        <div class="fw-bold mt-2">Tipo de proyecto</div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <div class="m-0">Mínimo:</div>
+                            <div class="m-0">40 horas</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <div class="m-0">Máximo:</div>
+                            <div class="m-0">800 horas</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <div class="m-0">Teletrabajo:</div>
+                            <div class="m-0">Siempre</div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <div class="m-0">Presencial:</div>
+                            <div class="m-0">Nunca</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="informacionFreelancer my-5">
+                    <div class="tituloInformacionFreelancer">REDES SOCIALES</div>
+                    <div class="cuerpoInformacionFreelancer">
+                        <div class="d-flex align-items-center mt-1">
+                            <img src="./Imágenes/gorjeo.png" style="width: 20px;">
+                            <a href="#" class="m-0 ps-1">Twitter</a>
+                        </div>
+                        <div class="d-flex align-items-center mt-1">
+                            <img src="./Imágenes/facebook.png" style="width: 20px;">
+                            <a href="#" class="m-0 ps-1">Facebook</a>
+                        </div>
+                        <div class="d-flex align-items-center mt-1">
+                            <img src="./Imágenes/correo.png" style="width: 20px;">
+                            <a href="#" class="m-0 ps-1">Correo electrónico</a>
+                        </div>
+                        <div class="d-flex align-items-center mt-1">
+                            <img src="./Imágenes/linkedin.png" style="width: 20px;">
+                            <a href="#" class="m-0 ps-1">Linkedin</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="h3 text-center">FREELANCERS PARECIDOS</div>
+        <div class="col-12 col-lg-6 m-auto mb-5">
+            <div class="card col-12 p-0 border-dark row me-2 mb-3 mb-sm-1">
+                <div class="row no-gutters p-0 m-0">
+                    <a href="./informacion.html" class="col-12 col-sm-auto p-0 m-0">
+                        <img src="./Imágenes/Cara 2.jpg" class="cardFoto d-none d-sm-block img-fluid rounded-circle p-0 m-0 m-sm-1 ms-sm-2" style="width: 150px;">
+                        <img src="./Imágenes/Cara 2.jpg" class="cardFoto d-sm-none img-fluid w-100" alt="">
+                    </a>
+                    <div class="col p-2 pt-sm-2 ps-sm-2 pe-sm-0">
+                        <div class="card-block pe-0">
+                            <p class="card-title h5 m-0">María García</p>
+                            <em class="card-text h7 m-0 mt-1">Gestora de base de datos</em>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <p class="h8 m-0 ms-2">de 8 críticas</p>
+                            </div>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/espana.png" style="width: 20px;">
+                                <p class="h7 m-0 ms-2">Sevilla, España</p>
+                            </div>
+                            <div class="d-flex justify-content-end pe-5">
+                                <div class="d-none d-sm-block fs-5 fw-bold rounded p-1 bg-info">25 €/hora</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer w-100 position-relative">
+                    <div class="d-block d-sm-none position-absolute end-0 translate-middle border p-1 rounded fw-bold fs-6 bg-light" style="top: -10px;">60 €/hora</div>
+                    <ul class="list-inline m-0">
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Java</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Spring-boot</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">MySQL Workbench</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">SQL</li>
+                    </ul>
+                </div>
+              </div>
+
+              <div class="card col-12 p-0 border-dark row me-2 mb-3 mb-sm-1">
+                <div class="row no-gutters p-0 m-0">
+                    <a href="./informacion.html" class="col-12 col-sm-auto p-0 m-0">
+                        <img src="./Imágenes/Cara 3.jpg" class="cardFoto d-none d-sm-block img-fluid rounded-circle p-0 m-0 m-sm-1 ms-sm-2" style="width: 150px;">
+                        <img src="./Imágenes/Cara 3.jpg" class="cardFoto d-sm-none img-fluid w-100" alt="">
+                    </a>
+                    <div class="col p-2 pt-sm-2 ps-sm-2 pe-sm-0">
+                        <div class="card-block pe-0">
+                            <p class="card-title h5 m-0">Roberto R.</p>
+                            <em class="card-text h7 m-0 mt-1">Php Developer Fullstack</em>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <p class="h8 m-0 ms-2">de 17 críticas</p>
+                            </div>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/argentina.png" style="width: 20px;">
+                                <p class="h7 m-0 ms-2">Buenos Aires, Argentina</p>
+                            </div>
+                            <div class="d-flex justify-content-end pe-5">
+                                <div class="d-none d-sm-block fs-5 fw-bold rounded p-1 bg-info">35 €/hora</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer w-100 position-relative">
+                    <div class="d-block d-sm-none position-absolute end-0 translate-middle border p-1 rounded fw-bold fs-6 bg-light" style="top: -10px;">60 €/hora</div>
+                    <ul class="list-inline m-0">
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">SQL</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Php</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">JQuerry</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Wordpress</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Angular</li>
+                    </ul>
+                </div>
+              </div>
+
+              <div class="card col-12 p-0 border-dark row me-2 mb-3 mb-sm-1">
+                <div class="row no-gutters p-0 m-0">
+                    <a href="./informacion.html" class="col-12 col-sm-auto p-0 m-0">
+                        <img src="./Imágenes/Cara 4.jpg" class="cardFoto d-none d-sm-block img-fluid rounded-circle p-0 m-0 m-sm-1 ms-sm-2" style="width: 150px;">
+                        <img src="./Imágenes/Cara 4.jpg" class="cardFoto d-sm-none img-fluid w-100" alt="">
+                    </a>
+                    <div class="col p-2 pt-sm-2 ps-sm-2 pe-sm-0">
+                        <div class="card-block pe-0">
+                            <p class="card-title h5 m-0">Sandra Ramírez</p>
+                            <em class="card-text h7 m-0 mt-1">Desarrolladora de aplicaciones web</em>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <p class="h8 m-0 ms-2">de 55 críticas</p>
+                            </div>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/espana.png" style="width: 20px;">
+                                <p class="h7 m-0 ms-2">Bilbao, España</p>
+                            </div>
+                            <div class="d-flex justify-content-end pe-5">
+                                <div class="d-none d-sm-block fs-5 fw-bold rounded p-1 bg-info">40 €/hora</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer w-100 position-relative">
+                    <div class="d-block d-sm-none position-absolute end-0 translate-middle border p-1 rounded fw-bold fs-6 bg-light" style="top: -10px;">60 €/hora</div>
+                    <ul class="list-inline m-0">
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Diseño de apps</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Android</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Swift</li>
+                    </ul>
+                </div>
+              </div>
+
+              <div class="card col-12 p-0 border-dark row me-2 mb-3 mb-sm-1">
+                <div class="row no-gutters p-0 m-0">
+                    <a href="./informacion.html" class="col-12 col-sm-auto p-0 m-0">
+                        <img src="./Imágenes/Cara 5.jpg" class="cardFoto d-none d-sm-block img-fluid rounded-circle p-0 m-0 m-sm-1 ms-sm-2" style="width: 150px;">
+                        <img src="./Imágenes/Cara 5.jpg" class="cardFoto d-sm-none img-fluid w-100" alt="">
+                    </a>
+                    <div class="col p-2 pt-sm-2 ps-sm-2 pe-sm-0">
+                        <div class="card-block pe-0">
+                            <p class="card-title h5 m-0">Helena Flores Vidal</p>
+                            <em class="card-text h7 m-0 mt-1">Desarrollora Fullstack</em>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <p class="h8 m-0 ms-2">de 30 críticas</p>
+                            </div>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/espana.png" style="width: 20px;">
+                                <p class="h7 m-0 ms-2">Madrid, España</p>
+                            </div>
+                            <div class="d-flex justify-content-end pe-5">
+                                <div class="d-none d-sm-block fs-5 fw-bold rounded p-1 bg-info">38 €/hora</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer w-100 position-relative">
+                    <div class="d-block d-sm-none position-absolute end-0 translate-middle border p-1 rounded fw-bold fs-6 bg-light" style="top: -10px;">60 €/hora</div>
+                    <ul class="list-inline m-0">
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Typescript</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">React.js</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Python</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">C++</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">C#</li>
+                    </ul>
+                </div>
+              </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark py-5">
+
+        <div class="container-xxl px-3 p-xxl-0">
+            <ul class="list-inline border-bottom pb-3">
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light" href="#">Términos y condiciones</a></li>
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light" href="#">Política de privacidad</a></li>
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light" href="#">Política de cookies</a></li>
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light"  href="#">Notificaciones de privacidad</a></li>
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light" href="#">Cookie settings</a></li>
+            </ul>
+            <div class="row align-items-end">
+                <img class="col-1 p-0" src="./Imágenes/Logotipo2.png" style="width: 50px;">
+                <p class="col text-primary text-light mb-0">Copyright © 2019-2022 Grupo Prograo S.L. Todos los derechos reservados</p>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

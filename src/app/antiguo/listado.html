@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prograo</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/1bb080c6ae.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather" />
+</head>
+<body>
+
+    <header class="d-none d-md-block bg-light">
+        <section class="row justify-content-between align-items-center container-xxl py-1 ps-1 pe-4 pe-xxl-1 m-auto">
+            <a class="d-flex col" href="./index.html">
+                <img src="./Imágenes/Logo_recortado.png" style="width: 100px;">
+            </a>
+
+           <div class="col d-flex d-flex-row justify-content-end p-0">
+                <input class="btn btn-primary" type="button" value="Identificarse" data-bs-toggle="modal" data-bs-target="#modalMenuMovil">
+           </div>
+        </section>
+    </header>
+
+    <nav class="d-none d-md-block bg-secondary p-2" style="position: sticky; top: 0%; z-index: 10;">
+        <section class="container-xxl px-3 p-xxl-0">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="./index.html">Inicio</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Freelancers</li>
+                </ol>
+              </nav>
+            <ul class="mb-0 list-inline align-items-center d-flex d-flex-row p-0">
+                <li class="list-inline-item col me-5">
+                    <form class="rounded p-0 form-group bg-light row">
+                        <input class="col w-100 border-0 flex-grow m-0 rounded" type="text" placeholder="Ej: Java, Desarrollo Web, Madrid" style="background-color: none; outline: none;">
+                        <button class="col-2 hover-zoom fa-2x btn btn-light m-0 p-0" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </li>
+                <div class="list-inline-item">
+                    <p class="d-inline text-light m-0 h5 me-4">/</p>
+                    <input class="d-inline btn btn-primary" type="button" value="Crear un proyecto">
+                    <input class="d-inline btn btn-primary" type="button" value="Proyectos predefinidos">
+                </div>
+            </ul>
+        </section>
+    </nav>
+
+    <!-- HEADER MÓVIL -->
+    <header class="navbar d-md-none bg-light" style="position: sticky; top: 0%; z-index: 10;">
+        <section class="container-xxl py-2 px-3 m-0 d-flex justify-content-between align-items-center">
+            <a href="./index.html">
+                <img src="./Imágenes/Logo_recortado.png" style="width: 100px;">
+            </a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalMenuMovil">
+                <i class="fa-2x fa-solid fa-bars"></i>
+            </a>
+        </section>
+    </header>
+
+    <div class="modal right fade" id="modalMenuMovil">
+        <div class="modal-dialog modal-side modal-top-right">
+            <div class="modal-content">
+                <div class="modal-header border pb-0">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Iniciar sesión</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Registrarse</button>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active p-3" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                        <div class="form-outline mb-3">
+                            <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Email"/>
+                        </div>
+            
+                        <div class="form-outline mb-3">
+                            <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Contraseña"/>
+                        </div>
+    
+                        <div class="form-check d-flex justify-content-start mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                            <label class="form-check-label fs-7 ps-2" for="form1Example3"> Recordar contraseña</label>
+                        </div>
+        
+                        <button class="btn btn-primary btn-lg btn-block col-12 m-0 mb-2" type="submit">Identificarse</button>
+        
+                        <hr class="my-4">
+        
+                        <button class="col-12 btn btn-lg btn-block btn-primary mb-2 border-0" style="background-color: #dd4b39;" type="submit"><i class="fab fa-google me-2"></i> Login con google</button>
+                        <button class="col-12 btn btn-lg btn-block btn-primary mb-2 border-0" style="background-color: #3b5998;" type="submit"><i class="fab fa-facebook-f me-2"></i>Login con facebook</button>
+                    </div>
+                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                        <div class="tab-pane fade show active p-3" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                            <div class="form-outline mb-3">
+                                <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Email"/>
+                            </div>
+                
+                            <div class="form-outline mb-3">
+                                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Contraseña"/>
+                            </div>
+
+                            <div class="form-outline mb-3">
+                                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Repetir contraseña"/>
+                            </div>
+            
+                            <button class="btn btn-primary btn-lg btn-block col-12 m-0" type="submit">Crear Usuario</button>
+            
+                            <hr class="my-4">
+            
+                            <button class="col-12 btn btn-lg btn-block btn-primary mb-2 border-0" style="background-color: #dd4b39;" type="submit"><i class="fab fa-google me-2"></i> Login con google</button>
+                            <button class="col-12 btn btn-lg btn-block btn-primary mb-2 border-0" style="background-color: #3b5998;" type="submit"><i class="fab fa-facebook-f me-2"></i>Login con facebook</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <main class="pt-3 bg-light">
+        <section class="container-xxl m-auto py-0 pe-4 ps-sm-3 pe-sm-5 p-xxl-0 row">
+            <section id="filtros" class="d-none d-md-block col-md-2 border-dark m-0 p-0 mb-5" style="min-width: 200px; overflow-y: scroll; position: sticky; top: 0%; z-index: 9; height: 100vh;">
+                <form class="m-0 p-0">
+
+                    <div class="form-check form-switch h7">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Verificado por Prograo</label>
+                    </div>
+
+                    <label class="h6 font-weight-bold m-0 p-0 mt-3">Precio por hora</label>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            0 - 15 €
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            16 - 30 €
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            31 - 50 €
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            51 - 100 €
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            + 100 €
+                        </label>
+                    </div>
+
+                    <div class="row align-items-center m-0 p-0 ms-2 mt-1">
+                        <input class="col-4 h-25 fs-7 py-1 me-1" type="text" placeholder="MIN">
+                        <input class="col-4 h-25 fs-7 py-1" type="text" placeholder="MAX">
+                        <button class="col-2 hover-zoom btn btn-light m-0 ms-1 p-0 border border-dark rounded" type="submit">
+                            <i class="fs-7 fa-solid fa-arrow-right m-0"></i>
+                        </button>
+                    </div>
+
+                    <label class="h6 font-weight-bold m-0 p-0 mt-3">Experiencia</label>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            0 - 10 proyectos
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            11 - 25 proyectos
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            26 - 50 proyectos
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            51 - 100 proyectos
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            + 100 proyectos
+                        </label>
+                    </div>
+
+                    <div class="row align-items-center m-0 p-0 ms-2 mt-1">
+                        <input class="col-4 h-25 fs-7 py-1 me-1" type="text" placeholder="MIN">
+                        <input class="col-4 h-25 fs-7 py-1" type="text" placeholder="MAX">
+                        <button class="col-2 hover-zoom btn btn-light m-0 ms-1 p-0 border border-dark rounded" type="submit">
+                            <i class="fs-7 fa-solid fa-arrow-right m-0"></i>
+                        </button>
+                    </div>
+
+                    <label class="h6 font-weight-bold m-0 p-0 mt-3">Idiomas</label>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            Español
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            Inglés
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            Catalán
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            Francés
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            Alemán
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            Portugués
+                        </label>
+                    </div>
+
+                    <input class="btn text-primary" type="button" value="Más idiomas(18)">
+
+                    <label class="h6 font-weight-bold m-0 p-0 mt-3">Críticas</label>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            0 - 10 comentarios
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            11 - 25 comentarios
+                        </label>
+                    </div>
+
+                    <div class="form-check ms-2 mb-0">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-7" for="flexCheckDefault">
+                            + 25 comentarios
+                        </label>
+                    </div>
+
+                    <div class="row align-items-center m-0 p-0 ms-2 mt-1">
+                        <input class="col-4 h-25 fs-7 py-1 me-1" type="text" placeholder="MIN">
+                        <input class="col-4 h-25 fs-7 py-1" type="text" placeholder="MAX">
+                        <button class="col-2 hover-zoom btn btn-light m-0 ms-1 p-0 border border-dark rounded" type="submit">
+                            <i class="fs-7 fa-solid fa-arrow-right m-0"></i>
+                        </button>
+                    </div>
+                    
+                </form>
+            </section>
+
+            <form class="d-md-none btn btn-primary fixed-bottom col-10 m-auto mb-3 rounded p-0 form-group bg-light d-flex align-items-center">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalFiltros"><i class="ps-2 fs-1 text-black fa-solid fa-gear"></i></a>
+                <input class="col w-100 border-0 flex-grow m-0 rounded ps-2" type="text" placeholder="Ej: Java, Desarrollo Web, Madrid" style="background-color: none; outline: none;">
+                <button class="col-2 hover-zoom fa-2x btn btn-light m-0 p-0" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            
+            <section class="modal p-0" id="modalFiltros">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">FILTROS</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="m-0 p-0">
+
+                            <div class="form-check form-switch h7">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Verificado por Prograo</label>
+                            </div>
+        
+                            <label class="h6 font-weight-bold m-0 p-0 mt-3">Precio por hora</label>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    0 - 15 €
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    16 - 30 €
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    31 - 50 €
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    51 - 100 €
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    + 100 €
+                                </label>
+                            </div>
+        
+                            <div class="row align-items-center m-0 p-0 ms-2 mt-1">
+                                <input class="col-4 h-25 fs-7 py-1 me-1" type="text" placeholder="MIN">
+                                <input class="col-4 h-25 fs-7 py-1" type="text" placeholder="MAX">
+                                <button class="col-2 hover-zoom btn btn-light m-0 ms-1 p-0 border border-dark rounded" type="submit">
+                                    <i class="fs-7 fa-solid fa-arrow-right m-0"></i>
+                                </button>
+                            </div>
+        
+                            <label class="h6 font-weight-bold m-0 p-0 mt-3">Experiencia</label>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    0 - 10 proyectos
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    11 - 25 proyectos
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    26 - 50 proyectos
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    51 - 100 proyectos
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    + 100 proyectos
+                                </label>
+                            </div>
+        
+                            <div class="row align-items-center m-0 p-0 ms-2 mt-1">
+                                <input class="col-4 h-25 fs-7 py-1 me-1" type="text" placeholder="MIN">
+                                <input class="col-4 h-25 fs-7 py-1" type="text" placeholder="MAX">
+                                <button class="col-2 hover-zoom btn btn-light m-0 ms-1 p-0 border border-dark rounded" type="submit">
+                                    <i class="fs-7 fa-solid fa-arrow-right m-0"></i>
+                                </button>
+                            </div>
+        
+                            <label class="h6 font-weight-bold m-0 p-0 mt-3">Idiomas</label>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    Español
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    Inglés
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    Catalán
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    Francés
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    Alemán
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    Portugués
+                                </label>
+                            </div>
+        
+                            <input class="btn text-primary" type="button" value="Más idiomas(18)">
+        
+                            <label class="col-12 h6 font-weight-bold m-0 p-0 mt-3">Críticas</label>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    0 - 10 comentarios
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    11 - 25 comentarios
+                                </label>
+                            </div>
+        
+                            <div class="form-check ms-2 mb-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fs-7" for="flexCheckDefault">
+                                    + 25 comentarios
+                                </label>
+                            </div>
+        
+                            <div class="row align-items-center m-0 p-0 ms-2 mt-1">
+                                <input class="col-4 h-25 fs-7 py-1 me-1" type="text" placeholder="MIN">
+                                <input class="col-4 h-25 fs-7 py-1" type="text" placeholder="MAX">
+                                <button class="col-2 hover-zoom btn btn-light m-0 ms-1 p-0 border border-dark rounded" type="submit">
+                                    <i class="fs-7 fa-solid fa-arrow-right m-0"></i>
+                                </button>
+                            </div>
+                            
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+            </section>      
+
+            <section class="col row ms-4 p-0 align-items-start justify-content-between">
+
+            
+              <div class="card col-12 col-lg-6 p-0 border-dark row me-2 mb-3 mb-sm-1">
+                <div class="row no-gutters p-0 m-0">
+                    <a href="./informacion.html" class="col-12 col-sm-auto p-0 m-0">
+                        <img src="./Imágenes/Cara 1.jpg" class="cardFoto d-none d-sm-block img-fluid rounded-circle p-0 m-0 m-sm-1 ms-sm-2" style="width: 150px;">
+                        <img src="./Imágenes/Cara 1.jpg" class="cardFoto d-sm-none img-fluid w-100" alt="">
+                    </a>
+                    <div class="col p-2 pt-sm-2 ps-sm-2 pe-sm-0">
+                        <div class="card-block pe-0">
+                            <p class="card-title h5 m-0">Maximiliano Pérez de los Campos</p>
+                            <em class="card-text h7 m-0 mt-1">Desarrollor frontend y diseñador gráfico</em>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <p class="h8 m-0 ms-2">de 34 críticas</p>
+                            </div>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/espana.png" style="width: 20px;">
+                                <p class="h7 m-0 ms-2">Madrid, España</p>
+                            </div>
+                            <div class="d-flex justify-content-end pe-5">
+                                <div class="d-none d-sm-block fs-5 fw-bold rounded p-1 bg-info">60 €/hora</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer w-100 position-relative">
+                    <div class="d-block d-sm-none position-absolute end-0 translate-middle border p-1 rounded fw-bold fs-6 bg-light" style="top: -10px;">60 €/hora</div>
+                    <ul class="list-inline m-0">
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Javascript</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">React.js</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Python</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Ruby</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Ruby on Rails</li>
+                    </ul>
+                </div>
+              </div>
+
+              <div class="card col-12 col-lg-6 p-0 border-dark row me-2 mb-3 mb-sm-1">
+                <div class="row no-gutters p-0 m-0">
+                    <a href="./informacion.html" class="col-12 col-sm-auto p-0 m-0">
+                        <img src="./Imágenes/Cara 2.jpg" class="cardFoto d-none d-sm-block img-fluid rounded-circle p-0 m-0 m-sm-1 ms-sm-2" style="width: 150px;">
+                        <img src="./Imágenes/Cara 2.jpg" class="cardFoto d-sm-none img-fluid w-100" alt="">
+                    </a>
+                    <div class="col p-2 pt-sm-2 ps-sm-2 pe-sm-0">
+                        <div class="card-block pe-0">
+                            <p class="card-title h5 m-0">María García</p>
+                            <em class="card-text h7 m-0 mt-1">Gestora de base de datos</em>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <p class="h8 m-0 ms-2">de 8 críticas</p>
+                            </div>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/espana.png" style="width: 20px;">
+                                <p class="h7 m-0 ms-2">Sevilla, España</p>
+                            </div>
+                            <div class="d-flex justify-content-end pe-5">
+                                <div class="d-none d-sm-block fs-5 fw-bold rounded p-1 bg-info">25 €/hora</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer w-100 position-relative">
+                    <div class="d-block d-sm-none position-absolute end-0 translate-middle border p-1 rounded fw-bold fs-6 bg-light" style="top: -10px;">60 €/hora</div>
+                    <ul class="list-inline m-0">
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Java</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Spring-boot</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">MySQL Workbench</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">SQL</li>
+                    </ul>
+                </div>
+              </div>
+
+              <div class="card col-12 col-lg-6 p-0 border-dark row me-2 mb-3 mb-sm-1">
+                <div class="row no-gutters p-0 m-0">
+                    <a href="./informacion.html" class="col-12 col-sm-auto p-0 m-0">
+                        <img src="./Imágenes/Cara 3.jpg" class="cardFoto d-none d-sm-block img-fluid rounded-circle p-0 m-0 m-sm-1 ms-sm-2" style="width: 150px;">
+                        <img src="./Imágenes/Cara 3.jpg" class="cardFoto d-sm-none img-fluid w-100" alt="">
+                    </a>
+                    <div class="col p-2 pt-sm-2 ps-sm-2 pe-sm-0">
+                        <div class="card-block pe-0">
+                            <p class="card-title h5 m-0">Roberto R.</p>
+                            <em class="card-text h7 m-0 mt-1">Php Developer Fullstack</em>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <p class="h8 m-0 ms-2">de 17 críticas</p>
+                            </div>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/argentina.png" style="width: 20px;">
+                                <p class="h7 m-0 ms-2">Buenos Aires, Argentina</p>
+                            </div>
+                            <div class="d-flex justify-content-end pe-5">
+                                <div class="d-none d-sm-block fs-5 fw-bold rounded p-1 bg-info">35 €/hora</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer w-100 position-relative">
+                    <div class="d-block d-sm-none position-absolute end-0 translate-middle border p-1 rounded fw-bold fs-6 bg-light" style="top: -10px;">60 €/hora</div>
+                    <ul class="list-inline m-0">
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">SQL</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Php</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">JQuerry</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Wordpress</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Angular</li>
+                    </ul>
+                </div>
+              </div>
+
+              <div class="card col-12 col-lg-6 p-0 border-dark row me-2 mb-3 mb-sm-1">
+                <div class="row no-gutters p-0 m-0">
+                    <a href="./informacion.html" class="col-12 col-sm-auto p-0 m-0">
+                        <img src="./Imágenes/Cara 4.jpg" class="cardFoto d-none d-sm-block img-fluid rounded-circle p-0 m-0 m-sm-1 ms-sm-2" style="width: 150px;">
+                        <img src="./Imágenes/Cara 4.jpg" class="cardFoto d-sm-none img-fluid w-100" alt="">
+                    </a>
+                    <div class="col p-2 pt-sm-2 ps-sm-2 pe-sm-0">
+                        <div class="card-block pe-0">
+                            <p class="card-title h5 m-0">Sandra Ramírez</p>
+                            <em class="card-text h7 m-0 mt-1">Desarrolladora de aplicaciones web</em>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <p class="h8 m-0 ms-2">de 55 críticas</p>
+                            </div>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/espana.png" style="width: 20px;">
+                                <p class="h7 m-0 ms-2">Bilbao, España</p>
+                            </div>
+                            <div class="d-flex justify-content-end pe-5">
+                                <div class="d-none d-sm-block fs-5 fw-bold rounded p-1 bg-info">40 €/hora</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer w-100 position-relative">
+                    <div class="d-block d-sm-none position-absolute end-0 translate-middle border p-1 rounded fw-bold fs-6 bg-light" style="top: -10px;">60 €/hora</div>
+                    <ul class="list-inline m-0">
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Diseño de apps</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Android</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Swift</li>
+                    </ul>
+                </div>
+              </div>
+
+              <div class="card col-12 col-lg-6 p-0 border-dark row me-2 mb-3 mb-sm-1">
+                <div class="row no-gutters p-0 m-0">
+                    <a href="./informacion.html" class="col-12 col-sm-auto p-0 m-0">
+                        <img src="./Imágenes/Cara 5.jpg" class="cardFoto d-none d-sm-block img-fluid rounded-circle p-0 m-0 m-sm-1 ms-sm-2" style="width: 150px;">
+                        <img src="./Imágenes/Cara 5.jpg" class="cardFoto d-sm-none img-fluid w-100" alt="">
+                    </a>
+                    <div class="col p-2 pt-sm-2 ps-sm-2 pe-sm-0">
+                        <div class="card-block pe-0">
+                            <p class="card-title h5 m-0">Helena Flores Vidal</p>
+                            <em class="card-text h7 m-0 mt-1">Desarrollora Fullstack</em>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <img class="m-0 p-0" src="./Imágenes/estrella_rellena.png" style="width: 15px;">
+                                <p class="h8 m-0 ms-2">de 30 críticas</p>
+                            </div>
+                            <div class="d-flex align-items-center mt-1">
+                                <img class="m-0 p-0" src="./Imágenes/espana.png" style="width: 20px;">
+                                <p class="h7 m-0 ms-2">Madrid, España</p>
+                            </div>
+                            <div class="d-flex justify-content-end pe-5">
+                                <div class="d-none d-sm-block fs-5 fw-bold rounded p-1 bg-info">38 €/hora</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer w-100 position-relative">
+                    <div class="d-block d-sm-none position-absolute end-0 translate-middle border p-1 rounded fw-bold fs-6 bg-light" style="top: -10px;">60 €/hora</div>
+                    <ul class="list-inline m-0">
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Typescript</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">React.js</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">Python</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">C++</li>
+                        <li class="list-inline-item bg-info rounded p-2 m-0 my-1">C#</li>
+                    </ul>
+                </div>
+              </div>
+
+
+            </section>
+        </section>
+        
+    </main>
+
+    <footer class="bg-dark py-5">
+
+        <div class="container-xxl px-3 p-xxl-0">
+            <ul class="list-inline border-bottom pb-3">
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light" href="#">Términos y condiciones</a></li>
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light" href="#">Política de privacidad</a></li>
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light" href="#">Política de cookies</a></li>
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light"  href="#">Notificaciones de privacidad</a></li>
+                <li class="col-12 col-md-auto list-inline-item pe-3"><a class="text-light" href="#">Cookie settings</a></li>
+            </ul>
+            <div class="row align-items-end">
+                <img class="col-1 p-0" src="./Imágenes/Logotipo2.png" style="width: 50px;">
+                <p class="col text-primary text-light mb-0">Copyright © 2019-2022 Grupo Prograo S.L. Todos los derechos reservados</p>
+            </div>
+        </div>
+
+    </footer>
+    
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>

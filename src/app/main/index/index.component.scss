@@ -1,3 +1,6 @@
+@import '../../../sass/mixins';
+@import '../../../sass/variables';
+
 #fondoGradiente {
 
     height: 550px;
@@ -24,7 +27,7 @@
     .letrasInicio {
         overflow: hidden;
     }
-    
+
     .letrasInicio p, .letrasInicio img {
         position: absolute;
         animation-name: derecha;
@@ -35,24 +38,24 @@
         animation-timing-function: linear;
         animation-fill-mode: none;
     }
-    
+
     .letrasInicio p:nth-child(1){
         animation: animacionJava 9s linear 0s infinite normal;
     }
-    
-    
+
+
     .letrasInicio p:nth-child(2){
         animation: animacionSpring 30s linear 0s infinite normal;
     }
-    
+
     .letrasInicio p:nth-child(3){
         animation: animacionThymeleaf 19s linear 0s infinite normal;
     }
-    
+
     .letrasInicio p:nth-child(4){
         animation: animacionGit 15s linear 0s infinite normal;
     }
-    
+
     .letrasInicio img:nth-child(5){
         animation: animacionOveja 50s linear 0s infinite alternate;
     }
@@ -65,7 +68,7 @@
         transform: rotate(270deg);
         animation: animacionLink 30s linear 0s infinite normal;
     }
-    
+
     @keyframes animacionJava {
         0% {top: 33%; left: 0%;}
         100% {top: 33%; left: 280%;}
@@ -75,12 +78,12 @@
         0% {top: 12%; left: 0%;}
         100% {top: 12%; left: 123%;}
     }
-    
+
     @keyframes animacionThymeleaf {
         0% {top: -30%; left: 71%;}
         100% {top: 120%; left: 71%;}
     }
-    
+
     @keyframes animacionGit {
         0% {top: 22%; left: 123%;}
         100% {top: 22%; left: -5%;}
@@ -104,34 +107,65 @@
     section {
 
         padding: 2em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         background: rgba(255, 255, 255, 0.5);
         z-index: 5;
         border-radius: 50px;
+        width: 100%;
 
         h1 {
-            font-size: 2.5em;
+           @include h1;
         }
 
         div {
 
-            form {
+          display: grid;
+          grid-template-columns: 20% 1fr 20%;
 
-                display: flex;
-                flex-direction: row;
+          form {
 
-                input {
-                    flex-basis: 50%;
-                }
+            grid-row: 1;
+            grid-column: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 20px;
 
-                button {
-
-                }
+            input {
+              flex-basis: 50%;
+              background: none;
+              border: none;
+              outline: none;
             }
+
+            button {
+              background: none;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              padding: 20px;
+
+              &:hover {
+                background-color: gainsboro;
+
+              }
+            }
+          }
+
+          p {
+            grid-row: 2;
+            grid-column: 2;
+            margin: 0 auto;
+            font-size: 24px;
+          }
+
+          & > input {
+            grid-row: 3;
+            grid-column: 2;
+            width: 50%;
+            margin: 0 auto;
+          }
         }
-        
+
     }
 }

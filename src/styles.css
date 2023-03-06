@@ -1,12 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@charset "UTF-8";
+/* COLORES */
+/* TAMAÑOS */
+/* FUENTES */
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -17,7 +22,18 @@
   border: none;
   cursor: pointer;
 }
-
 .boton_primario:hover {
-  background-color: #d15f26;
+  background-color: #f1702f;
 }
+
+.boton_secundario {
+  background-color: #08232C;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.boton_secundario:hover {
+  background-color: #0c2831;
+}/*# sourceMappingURL=styles.css.map */

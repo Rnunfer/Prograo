@@ -1,0 +1,39 @@
+@import './sass/variables';
+@import './sass/mixins';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+.container {
+  max-width: $max_width;
+  margin: 0 auto;
+}
+
+.boton_primario {
+  background-color: $primario;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primario_hover;
+  }
+}
+
+.boton_secundario {
+  background-color: $secundario;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secundario_hover;
+  }
+}
