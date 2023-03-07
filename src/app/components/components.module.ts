@@ -4,6 +4,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { AnimatedSearchComponent } from './animated-search/animated-search.component';
 import { PrograoDescriptionComponent } from './prograo-description/prograo-description.component';
+import { LoginRegisterComponent } from './login-register/login-register.component';
 
 
 
@@ -12,13 +13,15 @@ import { PrograoDescriptionComponent } from './prograo-description/prograo-descr
     FooterComponent,
     HeaderComponent,
     AnimatedSearchComponent,
-    PrograoDescriptionComponent
+    PrograoDescriptionComponent,
+    LoginRegisterComponent
   ],
   exports: [
     FooterComponent,
     HeaderComponent,
     AnimatedSearchComponent,
-    PrograoDescriptionComponent
+    PrograoDescriptionComponent,
+    LoginRegisterComponent
   ],
   imports: [
     CommonModule

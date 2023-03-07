@@ -257,16 +257,8 @@
 #fondoGradiente section div form {
   grid-row: 1;
   grid-column: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
   background-color: white;
   border-radius: 20px;
 }
@@ -276,13 +268,17 @@
   background: none;
   border: none;
   outline: none;
+  padding-left: 20px;
+  font-size: 16px;
 }
 #fondoGradiente section div form button {
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 20px;
 }
 #fondoGradiente section div form button:hover {
   background-color: gainsboro;

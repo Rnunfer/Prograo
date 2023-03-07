@@ -5,6 +5,31 @@
   text-align: center;
 }
 
+@mixin h3 {
+  font-family: $font-family-titulo;
+  font-size: 28px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+@mixin phone {
+  @media only screen and (min-width: #{$phone}) {
+      @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: #{$tablet}) {
+      @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: #{$desktop}) {
+      @content;
+  }
+}
+
 @mixin boton($color, $color_hover, $color_letra) {
   background-color: $color;
   border-radius: 10px;
