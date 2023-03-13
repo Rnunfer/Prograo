@@ -7,6 +7,7 @@ import { ComponentsModule } from './components/components.module';
 import { PagesModule } from './pages/pages.module';
 import { LoginRegisterComponent } from './components/login-register/login-register.component';
 import { ServiceService } from './service.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ServiceService } from './service.service';
     BrowserModule,
     AppRoutingModule,
     ComponentsModule,
-    PagesModule
+    PagesModule,
+    BrowserAnimationsModule
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

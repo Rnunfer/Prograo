@@ -20,4 +20,9 @@ export class LoginRegisterComponent implements OnInit {
     })
   }
 
+  hide() {
+    this.show = false;
+    document.body.classList.remove('no-scroll');
+  }
+
 }
