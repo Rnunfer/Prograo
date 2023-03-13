@@ -16,4 +16,13 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.modalBody .modalHeader div button {
+  margin-right: 10px;
+}
+.modalBody .modalHeader i {
+  cursor: pointer;
+}
+.modalBody .modalMain {
+  padding: 50px;
 }/*# sourceMappingURL=login-register.component.css.map */

@@ -9,6 +9,8 @@ import { ServiceService } from '../../service.service';
 export class LoginRegisterComponent implements OnInit {
 
   show = false;
+  login = true;
+  register = false;
 
   constructor ( private service : ServiceService ) {}
 
@@ -23,6 +25,17 @@ export class LoginRegisterComponent implements OnInit {
   hide() {
     this.show = false;
     document.body.classList.remove('no-scroll');
+    this.changeToLogin();
+  }
+
+  changeToLogin() {
+    this.login = true;
+    this.register = false;
+  }
+
+  changeToRegister() {
+    this.login = false;
+    this.register = true;
   }
 
 }

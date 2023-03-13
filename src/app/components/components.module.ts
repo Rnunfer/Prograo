@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { AnimatedSearchComponent } from './animated-search/animated-search.component';
 import { PrograoDescriptionComponent } from './prograo-description/prograo-description.component';
 import { LoginRegisterComponent } from './login-register/login-register.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -21,7 +22,8 @@ import { LoginRegisterComponent } from './login-register/login-register.componen
     HeaderComponent,
     AnimatedSearchComponent,
     PrograoDescriptionComponent,
-    LoginRegisterComponent
+    LoginRegisterComponent,
+    RouterModule
   ],
   imports: [
     CommonModule
